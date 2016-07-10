@@ -1,34 +1,32 @@
-Reference
+参考
 =========
 
-This section contains concise technincal information
-about Sublime Text.
-It is intended mainly as a quick reference
-for advanced users
-who want to modify Sublime Text's default behavior.
+本章节包含简单的
+关于 Sublime Text 的技术信息。
+它主要是为需要修改 Sublime Text 的默认行为的
+高级用户提供快速参考。
 
-If you're looking for a gentler introduction
-to any of these topics,
-try the general index.
+如果你想获取下面话题的简介，
+请参看顶级索引。
 
 .. TODO: link to the general index
 
 .. toctree::
     :maxdepth: 2
 
-    syntaxdefs
-    color_schemes
-    build_systems
-    key_bindings
-    menus
-    Settings <settings>
-    completions
+    语法定义
+    主题
+    构建系统
+    快捷键
+    菜单
+    设置 <settings>
+    自动完成
     symbols
-    comments
-    metadata
-    Command Palette <command_palette>
-    plugins
+    注释
+    元数据
+    命令面板 <command_palette>
+    插件
     api
-    commands
+    命令
     keyboard_shortcuts_win
     keyboard_shortcuts_osx

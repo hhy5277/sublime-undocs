@@ -1,16 +1,16 @@
 .. sublime: wordWrap false
 
-Syntax Definitions
+语法定义
 ==================
 
 
 .. note::
 
-    As of Sublime Text Build 3084,
-    a new syntax definition format has been added,
-    with the ``.sublime-syntax`` extension.
+    在 Sublime Text Build 3084 中，
+    添加了一种新的语法定义格式，
+    使用 ``.sublime-syntax`` 扩展名。
 
-    Documentation is available here:
+    相关内容参看：
     http://www.sublimetext.com/docs/3/syntax.html
 
 

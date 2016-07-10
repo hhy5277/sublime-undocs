@@ -26,7 +26,7 @@ Backers 2014
    基本概念
    编辑 <editing/editing>
    搜索和替换 <search_and_replace/search_and_replace_overview>
-   构建系统 (Batch Processing) <file_processing/build_systems>
+   构建系统 （批处理） <file_processing/build_systems>
    文件导航和文件管理 <file_management/file_management>
    定制 <customization/customization>
    扩展和自动化 <extensibility/extensibility>
