@@ -5,7 +5,7 @@
 
 
 =================
-Table of Contents
+目录
 =================
 
 
@@ -15,24 +15,24 @@ Backers 2014
 `Backers 2014 <_static/backers_2014/backers_2014.html>`_
 
 
-Content
+内容
 =======
 
 .. toctree::
    :maxdepth: 2
 
-   intro
-   Installation <getting_started/install>
-   basic_concepts
-   Editing <editing/editing>
-   Search and Replace <search_and_replace/search_and_replace_overview>
-   Build Systems (Batch Processing) <file_processing/build_systems>
-   File Navigation and File Management <file_management/file_management>
-   Customization <customization/customization>
-   Extensibility and Automation <extensibility/extensibility>
-   Command Line <command_line/command_line>
-   Reference <reference/reference>
-   Glossary <glossary/glossary>
+   简介
+   安装 <getting_started/install>
+   基本概念
+   编辑 <editing/editing>
+   搜索和替换 <search_and_replace/search_and_replace_overview>
+   构建系统 (Batch Processing) <file_processing/build_systems>
+   文件导航和文件管理 <file_management/file_management>
+   定制 <customization/customization>
+   扩展和自动化 <extensibility/extensibility>
+   命令行 <command_line/command_line>
+   参考 <reference/reference>
+   术语 <glossary/glossary>
 
 
 
