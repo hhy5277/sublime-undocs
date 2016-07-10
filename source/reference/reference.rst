@@ -14,19 +14,19 @@
 .. toctree::
     :maxdepth: 2
 
-    语法定义
-    主题
-    构建系统
-    快捷键
-    菜单
+    语法定义 <syntaxdefs>
+    主题 <color_schmemes>
+    构建系统 <build_systems>
+    快捷键 <key_bindings>
+    菜单 <menus>
     设置 <settings>
-    自动完成
+    自动完成 <completions>
     symbols
-    注释
-    元数据
+    注释 <comments>
+    元数据 <metadata>
     命令面板 <command_palette>
-    插件
+    插件 <plugins>
     api
-    命令
+    命令 <commands>
     keyboard_shortcuts_win
     keyboard_shortcuts_osx

@@ -21,9 +21,9 @@ Backers 2014
 .. toctree::
    :maxdepth: 2
 
-   简介
+   简介 <intro>
    安装 <getting_started/install>
-   基本概念
+   基本概念 <basic_concepts>
    编辑 <editing/editing>
    搜索和替换 <search_and_replace/search_and_replace_overview>
    构建系统 （批处理） <file_processing/build_systems>
