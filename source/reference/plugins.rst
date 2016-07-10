@@ -1,4 +1,4 @@
-Plugins
+插件
 =======
 
 .. seealso::

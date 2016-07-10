@@ -1,5 +1,5 @@
 ============
-Key Bindings
+快捷键
 ============
 
 Key bindings map key presses to commands.

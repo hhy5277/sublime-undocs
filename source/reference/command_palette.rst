@@ -1,5 +1,5 @@
 ===============
-Command Palette
+命令面板
 ===============
 
 The command palette is fed entries with ``.sublime-commands`` files.
