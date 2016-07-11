@@ -14,22 +14,21 @@
     http://www.sublimetext.com/docs/3/syntax.html
 
 
-Compatibility with Textmate
+Textmate 兼容的语法定义
 ***************************
 
-Generally, Sublime Text syntax definitions are compatible with Textmate
-language files.
+通常， Sublime Text 的语法定义是与 Textmate
+兼容的。
 
-File Format
+文件格式
 ***********
 
-Textmate syntax definitions are Plist files with the ``tmLanguage`` extension.
-However, for convenience in this reference document, YAML is shown instead.
+Textmate 语法定义文件是 Plist 文件，使用 ``tmLanguage`` 扩展名。
+然而， 为了方便，这里使用 YAML 格式。
 
-Additionally, Sublime Text also understands the ``hidden-tmLanguage`` extension,
-which can not be selected by the user but only by set by plugins. "Find in
-Files" makes use of this. The downsite is that these can not be included by
-import statements in other language definitions.
+另外， Sublime Text 也支持 ``hidden-tmLanguage`` 扩展名。
+这种格式不能被用户选择，但是可以被插件利用。 "Find in
+Files" 利用了这种特性。 这种方式的缺点在于不能被其他语法定义文件使用导入语法包含。
 
 .. code-block:: yaml
 
@@ -70,25 +69,23 @@ import statements in other language definitions.
 
 
 ``name``
-    Descriptive name for the syntax definition. Shows up in the syntax
-    definition dropdown menu located in the bottom right of the Sublime Text
-    interface. It's usually the name of the programming language or equivalent.
+    语法定义的名称。 显示在 Sublime Text 右下角的语法选择下拉菜单里。
+    通常就是编程语言的名称。
 
 ``scopeName``
-    Name of the topmost scope for this syntax definition. Either
-    ``source.<lang>`` or ``text.<lang>``. Use ``source`` for programming
-    languages and ``text`` for markup and everything else.
+    最顶层的语法定义作用域。 可以为
+    ``source.<lang>`` 或者 ``text.<lang>``。 使用 ``source`` 标明编程语言，使用 ``text``
+    标明标记语言和其他类型。
 
 ``fileTypes``
-    This is a list of file extensions (without the leading dot). When opening
-    files of these types, Sublime Text will automatically activate this syntax
-    definition for them. Optional.
+    这里是一系列文件扩展名 （不带点号）。 当打开
+    这些类型的文件时， Sublime Text 会自动为它们选择语法文件。 可选的。
 
 ``uuid``
-    Unique indentifier for this syntax definition. Currently ignored.
+    语法定义的唯一标识。 目前可以忽略。
 
 ``patterns``
-    Array of patterns to match against the buffer's text.
+    用于匹配 buffer 中文本的模式列表。
 
 ``repository``
     Array of patterns abstracted out from the ``patterns`` element. Useful to
