@@ -88,32 +88,31 @@ Files" 利用了这种特性。 这种方式的缺点在于不能被其他语法
     用于匹配 buffer 中文本的模式列表。
 
 ``repository``
-    Array of patterns abstracted out from the ``patterns`` element. Useful to
-    keep the syntax definition tidy as well as for specialized uses like
-    recursive patterns or re-using the same pattern. Optional.
+    从 ``patterns`` 元素中抽取的模式列表。 可以使语法定义文件保持简洁。
+    同时可以用于模式递归和复用。可选的。
 
 
-The Patterns Array
+模式列表
 ******************
 
-Elements contained in the ``patterns`` array.
+``patterns`` 列表中包含的元素。
 
 ``match``
-    Contains the following elements:
+    包含如下元素:
 
     ============    ============================================================
-    ``match``       Pattern to search for.
-    ``name``        Optional. Scope name to be assigned to matches of ``match``.
-    ``comment``     Optional. For information only.
-    ``captures``    Optional. Refinement of ``match``. See below.
+    ``match``       要搜索的模式。
+    ``name``        可选的。 ``match`` 的作用域名称。
+    ``comment``     可选的。 注释。
+    ``captures``    可选的。 ``match`` 提取元素。 见下面。
     ============    ============================================================
 
-    In turn, ``captures`` can contain *n* of the following pairs of elements
-    (note that ``0`` refers to the whole match):
+    另外， ``captures`` 可以包含 *n* 个如下的元素。
+    （注意， ``0`` 指的是整个分组）:
 
     ========      ===============================================
-    ``0..n``      Name of the group referenced. Must be a string.
-    ``name``      Scope to be assigned to the group.
+    ``0..n``      分组名称。 必须是字符串。
+    ``name``      分组的作用域名称。
     ========      ===============================================
 
     Examples:
@@ -135,15 +134,14 @@ Elements contained in the ``patterns`` array.
             '1': {name: constant.numeric.ssraw}
 
 ``include``
-    Includes items in the repository, other syntax definitions or the current
-    one.
+    从库中，其他语法定义文件，或当前文件中导入项目。
 
-    References:
+    参考:
 
         =========       ===========================
-        $self           The current syntax definition.
-        #itemName       itemName in the repository.
-        source.js       External syntax definitions.
+        $self           当前语法定义。
+        #itemName       库中的项目名。
+        source.js       外部语法定义文件。
         =========       ===========================
 
     Examples:
@@ -160,19 +158,19 @@ Elements contained in the ``patterns`` array.
         - include: source.js
 
 ``begin..end``
-    Defines a scope potentially spanning multiple lines
+    定义一个可以跨越多行的作用域。
 
-    Contains the following elements (only ``begin`` and ``end`` are required):
+    包含如下元素 （只有 ``begin`` 和 ``end`` 是必须的）:
 
         =================   ====================================================
-        ``name``            Scope name for the content including the markers.
-        ``contentName``     Scope name for the content excluding the markers.
-        ``begin``           The start marker pattern.
-        ``end``             The end marker pattern.
-        ``name``            Scope name for the whole region.
-        ``beginCaptures``   ``captures`` for ``begin``. See ``captures``.
-        ``endCaptures``     ``captures`` for ``end``. See ``captures``.
-        ``patterns``        Array of patterns to be matched against the content.
+        ``name``            包含标记的作用域名称。
+        ``contentName``     排除标记的内容区域作用域名称。
+        ``begin``           起始标记模式。
+        ``end``             结束标记模式。
+        ``name``            整个区域的作用域名称。
+        ``beginCaptures``   ``begin`` 的 ``captures`` 。 参考 ``captures`` 。
+        ``endCaptures``     ``end`` 的 ``captures`` 。 参考 ``captures`` 。
+        ``patterns``        用于匹配内容区域的模式列表。
         =================   ====================================================
 
     Example:
@@ -190,13 +188,13 @@ Elements contained in the ``patterns`` array.
         - name: support.other.ssraw
           match: .
 
-Repository
+库
 **********
 
-Can be referenced from ``patterns`` or from itself in an ``include`` element.
-See ``include`` for more information.
+可以在 ``patterns`` 中引用，或者使用 ``include`` 元素来引用自身。
+参看 ``include`` 以获取更多信息。
 
-The repository can contain the following elements:
+库中可以起包含如下元素:
 
 .. code-block:: yaml
 
@@ -242,16 +240,14 @@ Examples:
         - include: $self
 
 
-Escape Sequences
+转义序列
 ****************
 
-Be sure to escape JSON/XML sequences as needed.
+请根据需要对 JSON/XML 字符串进行转义。
 
 .. EXPLAIN
 
-For YAML, additionally make sure that you didn't unintentionally start a new
-scalar by not using quotes for your strings. Examples that **won't work** as
-expected::
+对于 YAML ， 需要额外注意不要遗漏了字符串的引号，从而导致意外的开始了一个新的分量。 by not using quotes for your strings. 下面是一些 **不能** 正常工作的例子::
 
     match: [aeiou]
 
